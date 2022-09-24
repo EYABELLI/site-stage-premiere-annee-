@@ -1,0 +1,329 @@
+
+h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+  
+}
+
+.readme {
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+  
+}
+.readme a {
+  color: #81bfea;
+}
+
+/*_________________  Accordion
+________________________________________*/
+.accordion {
+	position: relative;
+	margin: 60px 30px; /*hauteur*/
+	width: 60%;
+	background-color: #F7F7F7;
+	
+	
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #81bfea;
+  border-bottom: 3px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+	height: 0;
+	margin: -1px auto 0;
+	padding: 0 2.5%;
+	position: relative;
+	overflow: hidden;
+	width: 90%;
+	transition: all 0.1s ease;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	background-color: #F7F7F7;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+
+
+/* css pour la partie contact */ 
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message br + br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  border-color: #009961;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: #62c1c9;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  footer: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: #00b371;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contact
+{
+  margin-left: 350px;
+}
+
+/*    pour la partie resultats en ligne */ 
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("assets/img/back.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+  margin-top: 100px;
+}
+
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #fff;
+}
+
+.cta .cta-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  background: #29c1c9;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.cta .cta-btn:hover {
+  background: #00b371;
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.notice {
+  position: relative;
+  margin: 1em;
+  background: #F9F9F9;
+  padding: 1em 1em 1em 2em;
+  border-left: 4px solid #DDD;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+
+.notice:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: -17px;
+  background-color: #DDD;
+  color: #FFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: Georgia;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+ .btn-learn-more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #009961;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #009961;
+}
+
+.btn-learn-more:hover {
+  background: #009961;
+  color: #fff;
+  text-decoration: none;
+}
+a.btn-learn-more
+{
+  margin-left: 1000px;
+}

@@ -1,0 +1,537 @@
+/* ++++++++++++++++++++++++++++++  CSS POUR L'ESPACE PATIENT  +++++++++++++++++++++++++++++++++++++++++ */ 
+	
+
+/*_________________ //contenu
+________________________________________*/
+h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+/*__________________________________ cadre de page________________________________________*/
+.cadre-distributed{
+
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 10px 20px;
+	margin-top: 0px;
+}
+
+.cadre-distributed .cadre-left,
+.cadre-distributed .cadre-center,
+.cadre-distributed .cadre-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.cadre-distributed .cadre-left{
+	width: 60%;
+	
+}
+
+.cadre-distributed .cadre-center{
+	width: 38%;
+	
+}
+
+.cadre-distributed .cadre-right{
+	width: 1%;
+}
+
+/* responsive page */
+
+.txt{
+padding:2px;
+padding-left:20px;
+margin-right:260px;
+margin-left:150;
+margin-bottom:20px;
+margin-top:1px;
+text-align:justify;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size:16px;
+}
+
+.txt2{
+padding:2px;
+padding-left:20px;
+margin-right:260px;
+margin-left:150;
+margin-bottom:20px;
+margin-top:1px;
+text-align:justify;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size:18px;
+}
+/*__________________________________  Accordion____________________________________*/
+.accordion {
+	position: relative;
+	margin: 20px 20px; /*hauteur*/
+	width: 95%;
+	background-color: #F7F7F7;
+	 margin-top: 30px;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #81bfea;
+  border-bottom: 3px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+	height: 0;
+	margin: -1px auto 0;
+	padding: 0 2.5%;
+	position: relative;
+	overflow: hidden;
+	width: 90%;
+	transition: all 0.1s ease;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	background-color: #F7F7F7;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+* { box-sizing: border-box; }
+/*________________________________texte de contenu__________________________________*/
+h2{
+  
+  color:  #CCC;
+  font: normal 28px 'Cookie', cursive;
+  margin:0px;
+  margin: 20px 20px; /*hauteur*/
+}
+
+h4{
+  
+  color:  #80bde8;
+  font: normal 16px 'Cookie';
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  margin:0px; 
+}
+.TxtRq{
+padding:2px;
+padding-left:10px;
+margin-right:30px;
+
+margin-bottom:10px;
+margin-top:-8px;
+text-align:justify;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:13px;
+line-height:20px;
+}
+.Txt{
+text-align:justify;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:13px;
+line-height:20px;
+}
+/*________________________________fin texte de contenu__________________________________*/
+.wrapper {
+
+  width: 100%;
+  margin: 150px auto;
+  margin-top: 10px;
+}
+/*le menu*/
+.tabs {
+  position: relative;
+  /*arriÃ¨re plan du menu*/
+ /* margin: 2px 30px;
+  background: #1abc9c;
+  height: 6em;*/
+}
+
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: block;
+}
+
+.tabs::after { clear: both; }
+
+.tab { float: left; }
+
+.tab-switch { display: none; }
+
+.tab-label {
+position: relative;
+display: table;
+line-height: 4em; /*height d'ecriture*/
+height: 2em; /*longeur du menu*/
+padding: 0 1.5em; /*espacement entre les blocs*/
+background: #1abc9c;
+border-right: 0.125rem solid #16a085;
+color: #fff;
+/*cursor when i clic */
+cursor: pointer;
+transition: all 0.25s;
+}
+
+.tab-label:hover {
+  top: -0.25rem;
+  transition: all 0.25s;
+}
+
+.tab-content {
+  padding: 1rem;
+  background: #fff;
+  color: #09C;
+  border-bottom: 1rem solid #1abc9c;
+  height: 490px;
+  position: absolute;
+  z-index: 1;
+  top: 4em;/*espacement du bolc top*/
+  left: 0.1px; /*espacement du bolc left */
+  opacity: 0;
+  transition: all 0.35s;
+  width: 580px;
+}
+
+.tab-switch:checked + .tab-label {
+  
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.0625rem solid #fff;
+  transition: all 0.35s;
+  z-index: 2;
+  top: -0.0625rem;
+}
+
+.tab-switch:checked + .tab-label:hover { top: -0.0625rem; }
+
+.tab-switch:checked + .tab-label + .tab-content {
+  opacity: 1;
+  transition: all 0.35s;
+  z-index: 3;
+}
+.carte
+{
+  margin:50px;
+}
+/* css pour la partie contact */ 
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message br + br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  border-color: #009961;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: #62c1c9;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  footer: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: #00b371;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contact
+{
+  margin-left: 350px;
+}
+/*    pour la partie resultats en ligne */ 
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("assets/img/back.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+  margin-top: 100px;
+}
+
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #fff;
+}
+
+.cta .cta-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  background: #29c1c9;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.cta .cta-btn:hover {
+  background: #00b371;
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+/* css pour la partie actualités dans l'espace patient */ 
+/*--------------------------------------------------------------
+# Departments
+--------------------------------------------------------------*/
+.departments {
+  overflow: hidden;
+}
+
+.departments .nav-tabs {
+  border: 0;
+}
+
+.departments .nav-link {
+  border: 0;
+  padding: 12px 15px 12px 0;
+  transition: 0.3s;
+  color: #2c4964;
+  border-radius: 0;
+  border-right: 2px solid #ebf1f6;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.departments .nav-link:hover {
+  color: #1977cc;
+}
+
+.departments .nav-link.active {
+  color: #1977cc;
+  border-color: #1977cc;
+}
+
+.departments .tab-pane.active {
+  -webkit-animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.departments .details h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c4964;
+}
+
+.departments .details p {
+  color: #777777;
+}
+
+.departments .details p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .departments .nav-link {
+    border: 0;
+    padding: 15px;
+  }
+  .departments .nav-link.active {
+    color: #fff;
+    background: #1977cc;
+  }
+}
+.card-header 
+{
+  color:red;
+}
+.actualites
+{
+  margin: 80px;
+}
+
+ .btn-learn-more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #009961;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #009961;
+}
+
+.btn-learn-more:hover {
+  background: #009961;
+  color: #fff;
+  text-decoration: none;
+}
+a.btn-learn-more
+{
+  margin-left: 1000px;
+}
+
+/* https://survey.survicate.com/ea9a64e8ee2322c4/?p=anonymous  */ 
